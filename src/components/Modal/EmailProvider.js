@@ -13,6 +13,7 @@ class EmailProvider extends Component {
         this.handlePassword_2 = this.handlePassword_2.bind(this)
         this.checkPassword = this.checkPassword.bind(this)
         this.clickNext = this.clickNext.bind(this)
+        this._clickNext = this._clickNext.bind(this)
     }
 
     handleEmail(e) {
@@ -63,6 +64,10 @@ class EmailProvider extends Component {
         }
     }
 
+    _clickNext() {
+        this.props.changeStep('SetProfile')
+    }
+
     checkPassword() {
         const password_1 = this.state.password_1;
         const password_2 = this.state.password_2;
@@ -91,7 +96,7 @@ class EmailProvider extends Component {
                         <input type='password' className='ConfirmuserPassword' maxLength='20' minLength='8' onChange={this.handlePassword_2}/>
                     </div>
                     <div className='signUp-downward'>
-                        <button type='button' className='button-signUp' onClick={this.clickNext}>다음</button>
+                        <button type='button' className='button-signUp' onClick={this._clickNext}>다음</button>
                         <br />
                         <h6>3/5</h6>
                     </div>

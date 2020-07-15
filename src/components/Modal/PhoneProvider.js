@@ -19,7 +19,8 @@ class PhoneProvider extends Component {
         this.handleVerifyCode = this.handleVerifyCode.bind(this)   
         this.getVerifyCode = this.getVerifyCode.bind(this)
         this.confirmVerifyCode = this.confirmVerifyCode.bind(this)
-        this.clickNext = this.clickNext.bind(this)        
+        this.clickNext = this.clickNext.bind(this)   
+        this._clickNext = this._clickNext.bind(this)     
     }
 
     handleSelect(e) {
@@ -106,6 +107,10 @@ class PhoneProvider extends Component {
         }
     }
 
+    _clickNext() {
+        this.props.changeStep('EmailProvider')
+    }
+
     componentDidMount() {
         this.firebase = this.context.app
         document.getElementsByClassName('phone_certification')[0].setAttribute('id', 'phoneNum-certification')
@@ -144,7 +149,7 @@ class PhoneProvider extends Component {
                         </div>
                     </div>
                     <div className='signUp-downward'>
-                        <button type='button' className='button-signUp6' onClick={this.clickNext}>다음</button>
+                        <button type='button' className='button-signUp6' onClick={this._clickNext}>다음</button>
                         <h6>2/5</h6>
                     </div>
                 </div>
