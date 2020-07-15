@@ -5,6 +5,7 @@ import TOS from './TOS'
 import PhoneProvider from './PhoneProvider'
 import EmailProvider from './EmailProvider'
 import SetProfile from './SetProfile'
+import Welcome from './Welcome'
 
 
 class Modal extends Component {
@@ -76,7 +77,6 @@ class Modal extends Component {
                     <div className="mod">
                         <EmailLogin 
                         toggleFunction={this.props.toggleFunction}
-                        // emailVerify={this.emailVerify}
                         signIn={this.signIn}
                         signInFail={this.signInFail}
                         emailPasswordFind={this.emailPasswordFind}
@@ -151,7 +151,10 @@ class Modal extends Component {
             case 'Welcome' :
                 return (
                     <div className='mod'>
-                    <h1>Welcome!</h1>
+                        <Welcome 
+                        toggleFunction={this.props.toggleFunction}
+                        changeStep={this.changeStep}
+                        />
                     </div>
                 )
         }

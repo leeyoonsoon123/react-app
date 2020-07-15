@@ -38,6 +38,7 @@ class SetProfile extends Component{
         this.setToProfile = this.setToProfile.bind(this);
         this.deleteImg = this.deleteImg.bind(this);
         this.clickNext = this.clickNext.bind(this);
+        this._clickNext = this._clickNext.bind(this);
     }
 
     handleUserName(e) {
@@ -50,11 +51,16 @@ class SetProfile extends Component{
 
     async clickNext() {        
         const imgT = this.state.imgT.map((img) => {
-            const uint8Arr = Uint8Array.from(img.data)
-            console.log(uint8Arr)
+            const uint8Arr = new Uint8Array(img.data);
+            const dataArr = [];
+            uint8Arr.forEach(ele => {
+                dataArr.push(ele);
+            })
+            console.log(dataArr);
+
             return {
                 name: img.name,
-                data: uint8Arr,
+                data: dataArr,
                 tp: img.tp,
                 isMain: img.isMain
             }
@@ -94,6 +100,10 @@ class SetProfile extends Component{
         if(response.result === 'SUCCESS') {
             this.props.changeStep('Welcome')
         }
+    }
+
+    _clickNext() {
+        this.props.changeStep('Welcome')
     }
 
     handleBirth(e) {
@@ -287,7 +297,7 @@ class SetProfile extends Component{
                             </span>
                         </div>
                         <div className='signUp-downward'>
-                            <button type='button' className='button-signUp' onClick={this.clickNext}>다음</button>
+                            <button type='button' className='button-signUp' onClick={this._clickNext}>다음</button>
                             <h6>4/5</h6>
                         </div>
                     </div>
