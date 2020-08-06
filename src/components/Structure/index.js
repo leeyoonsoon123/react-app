@@ -9,7 +9,9 @@ import Home from '../Home';
 import Terms from '../Policy/Terms'
 import Privacy from '../Policy/Privacy'
 import Location from '../Policy/Location'
+import QnA from '../Policy/QnA'
 import Myinfo from '../Myinfo'
+
 
 import { AuthContext } from '../AuthContext'
 
@@ -31,6 +33,9 @@ class Structure extends Component {
                         </Route>
                         <Route path='/policy/location'>
                             <Location />
+                        </Route>
+                        <Route path='/policy/QnA'>
+                            <QnA />
                         </Route>
                     </Switch>
                 </Router>
