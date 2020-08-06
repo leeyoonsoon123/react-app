@@ -6,7 +6,10 @@ import PhoneProvider from './PhoneProvider'
 import EmailProvider from './EmailProvider'
 import SetProfile from './SetProfile'
 import Welcome from './Welcome'
+import Firebase, { FirebaseContext } from '../Firebase';
+import AlertMessage from './AlertMessage'
 
+import '../../stylesheets/Modal/Modal.css';
 
 class Modal extends Component {
     constructor(props) {
@@ -68,6 +71,10 @@ class Modal extends Component {
                         <Main 
                         toggleFunction={this.props.toggleFunction}
                         changeStep={this.changeStep}
+
+                        warningMessage={this.props.warningMessage}
+                        handleWarningMessage={this.props.handleWarningMessage}
+                        clearWarningMessage={this.props.clearWarningMessage}
                         />
                     </div>
                 );
@@ -81,9 +88,19 @@ class Modal extends Component {
                         signInFail={this.signInFail}
                         emailPasswordFind={this.emailPasswordFind}
                         changeStep={this.changeStep}
+                        history={this.props.history}
                         />
                     </div>
                 );
+            case 'Temp':
+                return (
+                    <div className='mod'>
+                        <AlertMessage 
+                            warningMessage={this.props.warningMessage}
+                            clearMessage={this.props.clearWarningMessage}
+                        />
+                    </div>
+                )
             
             case 'SignIn':
                 return (
@@ -108,11 +125,13 @@ class Modal extends Component {
             case 'PhoneProvider':
                 return (
                     <div className='mod'>
+                    <FirebaseContext.Provider value={new Firebase()}>
                         <PhoneProvider 
                         toggleFunction={this.props.toggleFunction}
                         changeStep={this.changeStep}
                         setUid={this.setUid}
                         />
+                    </FirebaseContext.Provider>
                     </div>
                 );
             case 'EmailProvider':
@@ -151,10 +170,9 @@ class Modal extends Component {
             case 'Welcome' :
                 return (
                     <div className='mod'>
-                        <Welcome 
-                        toggleFunction={this.props.toggleFunction}
-                        changeStep={this.changeStep}
-                        />
+                    <Welcome 
+                    toggleFunction={this.props.toggleFunction}
+                    />
                     </div>
                 )
         }

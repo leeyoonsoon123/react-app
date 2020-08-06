@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap');
+
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;   
+}
+.term-title {
+    width: 100%;
+    /* padding: 0 7%; */
+    margin: 0;
+    max-width: 100%;
+    color:gray;
+background-color: white;
+    /* background-image: url('/public/images/high_quality/Delius-HP-sec1.png'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 100vh; */
+    position: fixed;
+    z-index: 9999;
+}
+.Main-bar{
+    border-bottom-style: solid;
+    border-bottom-width:1px;
+    border-color: rgb(211, 210, 210);
+    width:100%;
+}
+
+#bar-icon{
+    margin: 2% 1% 2% 0%;
+   width: 40px;
+   height: 40px;
+}
+
+.contentClose{
+    background-color: transparent;
+    border: 0;
+    color: gray;
+    font-size: 1.5rem;
+    float:right;
+    padding-top: 10px;
+}
+.contentClose:focus{
+    outline: 0;
+}
+.contentClose:hover{
+    color: tomato;
+    transition: 0.3s;
+}
+.deliusName{
+    font-size: 2.5rem;
+    vertical-align: middle;
+    font-weight: 700;
+    color: rgb(49, 49, 49);
+    margin-bottom: 1rem;
+}
+.topbar-item{
+    display: inline;
+}
+.box{
+    padding-top:10rem;
+}
+.f-L{
+    font-size: 2rem;
+}
+.f-m {
+    font-size: 1.5rem;
+}
+.f-s{
+    font-size: 1.1rem;
+}
+.mg-top-1{
+    margin-top: 1%;
+}
+
+.show-menu div{
+    cursor: pointer;
+}
+
+.sidenav {
+    height:100%;
+    width: 0;
+    position: fixed;
+    z-index:1;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition:0.5s ease-in-out;
+    padding-top: 170px;
+    border-right: solid 1px rgb(211, 210, 210);
+}
+ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.sidenav .tab {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: gray;
+    display: block;
+    transition: 0.2s ease-in-out;
+
+    
+}
+.sidenav .DeliusTab{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: gray;
+    display: block;
+    transition: 0.2s ease-in-out;
+    
+}
+.DeliusTab:hover{
+    color: tomato;
+}
+.tab:hover{
+    color: tomato;
+}
+
+.closebtn {
+    position: absolute;
+    top: 100px;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+.openmenu:hover {
+    color:rgb(153, 153, 153);
+    transition:0.5s ease-in-out;
+}
+.openmenu {
+    position: relative;
+    top: 120px;
+    right: 130px;
+    font-size: 20px;
+    cursor:pointer;
+    transition:0.5s ease-in-out;
+}
+.openmenu > i {
+    font-size: 30px;
+}
+/* 미디어쿼리 적용 */
+@media screen and (max-height:450px) {
+    .sidenav {
+        padding-top:15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+    
+}
+
+@media screen and (max-width:766px){
+    .DeliusTab{
+        font-size: 1.5rem !important;
+    }
+    .tab{
+        font-size: 0.6rem;
+    }
+}

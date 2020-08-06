@@ -1,0 +1,12 @@
+.welcome{
+    margin-top:10rem;
+    margin-bottom: 3rem;
+}
+.welcome h5{
+    font-weight: bold;
+}
+.welcome-Img{
+    margin-bottom: 2rem;
+    height: 3rem;
+    width: 3rem;
+}

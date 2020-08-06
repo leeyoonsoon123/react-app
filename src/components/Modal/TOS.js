@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import deliusLogo from '../../images/high_quality/main-delius.jpg';
+import '../../stylesheets/Modal/TOS.css'
 
 class TOS extends Component {
     constructor(props) {
@@ -105,23 +105,20 @@ class TOS extends Component {
     render() {
         return(
             <div className='popup'>
+                <button className="close" onClick={this.props.toggleFunction}>&times;</button>
                 <div className='content'>
-                    <img src={deliusLogo} className="delius-mainImg1" width="25%" />
-                    <button className="close" onClick={this.props.toggleFunction}>&times;</button>
                     <div className='box-all'>
-                        <p>가입전 약관동의가 필요합니다.<span className='all-agree-text'>(전체동의)</span></p>
+                        <p>가입전 약관동의가 필요합니다.</p>
                         <div className='bbb'>
                             <div className='agree-box'>전체동의</div>
                             <input type='checkbox' id='box-all' checked={this.state.check_all} onChange={this.check_all}/>
                             <label htmlFor='box-all'></label>
                         </div>
                     </div>
-                    
                     <hr className='signUp-hr'/>
-                    
                     <div className='boxes'>
                         <div className='No1'>
-                            <p>약관 1번항목</p>
+                            <p className="pp">약관 1번항목</p>
                             <div className='aaa'>
                                 <div className='agree-box'>동의</div>
                                 <input type='checkbox' id='box-1' checked={this.state.check_1} onChange={this.check_1}/>
@@ -129,7 +126,7 @@ class TOS extends Component {
                             </div>
                         </div>
                         <div className='No1'>
-                            <p>약관 2번항목</p>
+                            <p className="pp">약관 2번항목</p>
                             <div className='aaa'>
                                 <div className='agree-box'>동의</div>
                                 
@@ -138,7 +135,7 @@ class TOS extends Component {
                             </div>
                         </div>
                         <div className='No1'>
-                            <p>약관 3번항목</p>
+                            <p className="pp">약관 3번항목</p>
                             <div className='aaa'>
                                 <div className='agree-box'>동의</div>
             
@@ -146,14 +143,13 @@ class TOS extends Component {
                                 <label htmlFor='box-3'></label>
                             </div>
                         </div>
-                        <p className='agree-text'>체크시 동의로 간주됩니다</p>
                     </div>
-                    <div className='signUp_downward'>
-                        <button type='button' className='button-signUp' onClick={this.isAllChecked}>다음</button>
+                </div>
+                 <div className='signUp_downward'>
+                        <button type='button' className='next' onClick={this.isAllChecked}>다음</button>
                         <br />
                         <h6>1/5</h6>
                     </div>
-                </div>
             </div>
         );
     }

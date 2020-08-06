@@ -1,0 +1,248 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+.myinfo-title {
+    width: 100%;
+    /* padding: 0 7%; */
+    display: table;
+    margin: 0;
+    max-width: 100%;
+    color:grey;
+background-color: white;
+    /* background-image: url('/public/images/high_quality/Delius-HP-sec1.png'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 100vh; */
+    
+   
+}
+
+
+nav {
+  text-align: center;
+}
+.Main-bar{
+    border-bottom-style: solid;
+    border-bottom-width:1px;
+    border-color: rgb(211, 210, 210);
+    width:100%;
+    
+  
+}
+.imgPreview-info .box-effect{ 
+    width:10rem;
+    height:10rem;
+}
+.fix-box .img-upload-btn{
+    margin-top: 4rem;
+    margin-left: 0;
+}
+
+.nav-item {
+    padding : 10px;
+    float:right;
+}
+
+
+
+#info-icon{
+   width: 45px;
+   height: 45px;
+   margin: 1rem 0;
+
+}
+
+
+.nav-item button{
+    border: 0;
+    background-color: #fff;
+    
+  }
+  .nav-item button:hover{
+    opacity: 0.6;
+  }
+  .radius-user-img{
+    margin-top: 5px;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+  }
+  .dropdown-menu{
+    margin-right: 2rem;
+  }
+  
+  .pic-sec .container{
+    margin: 0.1rem auto;
+  }
+  
+  .fix-user{
+    font-size: 1rem;
+    border-radius: 5px;
+    border-style:none;
+    padding: 2%;
+    font-weight: 400;
+}
+
+.img-in {
+    text-align: center;
+}
+.info {
+    
+     height:20%;
+     margin-bottom: 1rem;
+
+}
+.info-2{
+    height: 20%;
+    margin-bottom: 1rem;
+}
+.info .info-T{
+    position: relative;
+    top:25%;
+}
+.info-box{
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+}
+.pic-col{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+.pic-sec{
+    margin: 1rem auto;
+}
+.pic{
+    padding-top :1%;
+    text-align: center; 
+    width:25%;
+}
+.pic img{
+    width:100%;
+}
+.hr-line{
+    border-bottom: 1px solid gray;
+}
+.userSelc{
+    display: inline-flex;
+    border: 1px solid;
+    border-radius:5px;
+    border-color: rgb(211, 210, 210);
+    padding: 2px 5px;
+    margin: 1%;
+}
+.middle-line{
+    background-image: linear-gradient(to right, rgb(173,141,245)  0%, rgb(255,128,160) 100%);
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 2.2rem;
+
+}
+@media screen and (min-width:700px){
+    .pic{
+        padding-top : 1%;
+        text-align: center; 
+        width:49%;
+    }
+    .radius-user-img-in{
+        margin:auto;
+        height: 8rem;
+        width: 8rem;
+        border:solid 5px #fff;
+        border-radius: 50%;
+        -moz-box-shadow: 0px 0px 10px #919191;
+        -webkit-box-shadow: 0px 0px 10px #919191;
+        box-shadow: 0px 0px 10px #919191;
+      }
+      .info-nm{
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      .info-T{
+          font-size:1rem;
+          font-weight: 400;
+
+      }
+      .r-mg{
+          margin-right:1%
+      }
+      .b-mg{
+          margin-bottom:1%;
+          border-bottom: 1px solid gray;
+    
+      }
+}
+@media screen and (min-width:415px) and (max-width: 699px){
+    .pic{
+        width:100%;
+    }
+    .radius-user-img-in{
+        margin:auto;
+        height: 7rem;
+        width: 7rem;
+        border:solid 5px #fff;
+        border-radius: 50%;
+        -moz-box-shadow: 0px 0px 10px #919191;
+        -webkit-box-shadow: 0px 0px 10px #919191;
+        box-shadow: 0px 0px 10px #919191;}
+      .info{
+          font-weight: 400;
+        font-size: 0.8rem;
+      }
+      #bar-icon{
+        margin-right: 30%;
+       width: 90px;
+       height: 27px;
+    }
+    .fix-user{
+        font-size: 1rem;
+        border-radius: 5px;
+        border-style:none;
+        padding: 2%;
+        font-weight: 400;
+    }
+    .b-mg{
+        padding-bottom: 1rem;
+        margin-bottom:1%;
+        border-bottom: 1px solid gray;
+  
+    }
+}
+@media screen and (max-width: 414px){
+    .pic{
+        width:100%;
+    }
+    .radius-user-img-in{
+        margin:auto;
+        height: 6rem;
+        width: 6rem;
+        border:solid 5px #fff;
+        border-radius: 50%;
+        -moz-box-shadow: 0px 0px 10px #919191;
+        -webkit-box-shadow: 0px 0px 10px #919191;
+        box-shadow: 0px 0px 10px #919191;}
+      .info{
+          font-weight: 400;
+        font-size: 0.8rem;
+      }
+      #bar-icon{
+        margin-right: 30%;
+       width: 90px;
+       height: 27px;
+    }
+    .fix-user{
+        font-size: 1rem;
+        border-radius: 5px;
+        border-style:none;
+        padding: 2%;
+        font-weight: 400;
+    }
+    .b-mg{
+        padding-bottom: 1rem;
+        margin-bottom:1%;
+        border-bottom: 1px solid gray;
+  
+    }
+}

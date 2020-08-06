@@ -8,7 +8,9 @@ const firebaseConfig = {
 
 class Firebase {
     constructor() {
-        app.initializeApp(firebaseConfig);
+        if(!app.apps.length) {
+            app.initializeApp(firebaseConfig);
+        }
         this.app = app;
     }
     

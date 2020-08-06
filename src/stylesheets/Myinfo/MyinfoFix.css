@@ -1,0 +1,367 @@
+.fix-box{
+    border: 1px solid rgb(173, 173, 173);
+    margin-top: 3%;
+    padding: 10% 7rem;
+    margin-bottom: 5%;
+}
+.container-box{
+    max-width:40rem;
+    min-width: 40rem;
+    margin: 1% 30%;
+}
+
+.fix-title{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: rgb(65, 65, 65);
+}
+.fix-btn{
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+.fix-btn + label{
+    background: #d4d4d4;
+    border: none;
+    border-radius: 5px;
+    color: rgb(87, 87, 87);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 5rem 4rem;
+    position: relative;
+    transition: all 0.3s;
+    vertical-align: middle;
+    
+}
+.plusBtn:hover{
+    background-color: #3f3f3f;
+    color: white;
+}
+.input-text {
+    padding: 0.5em;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    width:100%;
+    text-align: center;
+}
+
+.input-text:focus{
+    outline: 0;
+    border-bottom: 1px solid rgb(161, 161, 161);
+}
+.left-box{
+    margin-bottom: 30px;
+    border-right: 2px dotted rgb(0, 0, 0, 0.3);
+}
+.right-box{
+    padding-left: 6rem;
+}
+
+.button-div{
+    text-align: center;
+}
+.fix-title .info-dropdown select{
+    padding:.2em;
+    width:100%;
+}
+.fix-box .info_select{
+    width:100%;
+}
+.textArea{
+    resize:none;
+    width:100%;
+    font-size: 0.9rem;
+    height: 5rem;
+    border-radius: 20px;
+    padding:2%;
+    border: 1px solid rgb(197, 197, 197);
+}
+.textArea:focus{
+    outline:0;
+}
+.button-div-btn{
+    flex: 1 1 auto;
+    margin: 10px 10px 0px 10px;
+    padding: 10px;
+    width:8rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+   text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px #eee;
+    border-radius: 50px;
+    border:0;
+    outline: 0;
+    margin-top: 3rem;
+    background-image: linear-gradient(to right, rgb(173,141,245) 0%, rgb(255,128,160) 51%, rgb(173,141,245) 100%);
+}
+.button-div-btn:hover{
+    outline:0;
+    background-position: right center;
+}
+.button-div-btn:focus{
+    outline: 0;
+}
+.fix-box .imgdiv{
+    margin:0%
+}
+.profile-set-btn, .profile-del-btn{
+    border:0;
+    width: 100%;
+}
+.profile-set-btn:focus, .profile-del-btn:focus{
+    outline:0
+}
+.profile-set-btn{
+    color:white;
+    padding: 1rem 0;
+    background-image: linear-gradient(to right, rgb(173,141,245)  0%, rgb(255,128,160) 100%);
+}
+.profile-del-btn{
+    padding:0.8rem 0;
+    background-color: transparent;
+    color: gray;
+    
+}
+.user-sel-img{
+    margin-top: 1rem;
+    width:8rem;
+    height: 8rem;
+}
+.alert-img-message {
+    width: 100%;
+    height: 100%;
+    color: gray;
+    margin: 10% 0%;
+}
+.popup-img-alert{
+    margin: 4.325rem auto;
+    padding: 1.25rem 0 0rem 0;
+    background: #fff;
+    width: 22rem;
+    position: relative;
+    text-align: center;
+    z-index: 11;
+  
+}
+
+.mod-img-alert{
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: -8.5px;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  }
+
+  .restIMG{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    
+  }
+  .fix-box .upload-btn{
+    text-align: left;
+}
+.fix-box .img-upload-btn{
+    height: 0;
+    overflow: hidden;
+    width: 0;
+    margin-left: 5.5rem;
+    
+}
+.fix-box .img-upload-btn +label{
+    background: #ffffff;
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 5px;
+    color: rgb(87, 87, 87);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: .5rem 2rem;
+    position: relative;
+    transition: all 0.3s;
+    
+}
+.fix-box .img-upload-btn:hover{
+    background-color: #3f3f3f;
+    color: white;
+}
+.fix-box .img_btn{
+    margin-top: -3rem;
+}
+  
+  @media screen and (max-width:580px){
+    .popup-alert{
+        margin: 4.325rem auto;
+        padding: 1.25rem auto;
+        background: #fff;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        z-index: 11;
+      
+    }
+
+  }
+
+@media screen and (min-width:642px){
+    .restIMG .web-img{
+        width:49.9%
+    }
+    .restIMG .thumbnail_img{
+        width: 6rem;
+        height: 6rem;
+        margin:0 0rem 0.7rem 2rem ;
+    }
+    .mainIMG .thumbnail_img{
+        width:12.2rem !important;
+        height: 12.6rem !important;
+        margin:0;
+    }
+    .container-box{
+        max-width:40rem;
+        min-width: 40rem;
+        margin: 1% auto;
+    }
+}
+@media screen and (min-width:480px) and (max-width:641px){
+    .container-box{
+        max-width:100%;
+        min-width: 100%;
+        margin: 1% auto;
+    }
+    .fix-box{
+        border: none;
+        margin-top: 3%;
+        padding: 10% 5rem;
+        margin-bottom: 5%;
+    }
+    .restIMG .thumbnail_img{
+        width: 5.5rem;
+        height: 5.5rem;
+        margin:0 0rem 0.5rem 1rem ;
+    }
+    .mainIMG .thumbnail_img{
+        width:10rem !important;
+        height: 11.5rem !important;
+        margin:0;
+    }
+    .restIMG{
+        padding-left:1rem;
+        position: absolute;
+        left: 13.5rem;
+    }
+}
+@media screen and (min-width:369px)and (max-width:479px){
+    .container-box{
+        max-width:100%;
+        min-width: 100%;
+        margin: 1% auto;
+    }
+    .fix-box{
+        border: none;
+        margin-top: 3%;
+        padding: 10% 3rem;
+        margin-bottom: 5%;
+    }
+    .restIMG .thumbnail_img{
+        width: 4rem;
+        height: 4rem;
+        margin:0 0rem 0.5rem 0.5rem ;
+    }
+    .mainIMG .thumbnail_img{
+        width:8.5rem !important;
+        height: 8.5rem !important;
+        margin:0;
+    }
+    .restIMG{
+        padding-left:3rem;
+        position: absolute;
+        left: 9rem;
+    }
+    .button-div-btn{
+        flex: 1 1 auto;
+        margin: 10px 10px 0px 10px;
+        padding: 10px;
+        width:6rem;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+       text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 0 20px #eee;
+        border-radius: 50px;
+        border:0;
+        outline: 0;
+        margin-top: 3rem;
+        background-image: linear-gradient(to right, rgb(173,141,245) 0%, rgb(255,128,160) 51%, rgb(173,141,245) 100%);
+    }
+}
+@media screen and (max-width:368px){
+    .container-box{
+        max-width:100%;
+        min-width: 100%;
+        margin: 1% auto;
+    }
+    .fix-box{
+        border: none;
+        margin-top: 3%;
+        padding: 10% 2rem;
+        margin-bottom: 5%;
+    }
+    .restIMG .thumbnail_img{
+        width: 4.5rem;
+        height: 4.25rem;
+        margin:0 0rem 0.5rem 0.5rem ;
+    }
+    .mainIMG .thumbnail_img{
+        width:9rem !important;
+        height: 9rem !important;
+        margin:0;
+    }
+    .restIMG{
+        padding-left:1rem;
+        position: absolute;
+        left: 10rem;
+    }
+    .button-div-btn{
+        flex: 1 1 auto;
+        margin: 10px 10px 0px 10px;
+        padding: 10px;
+        width:6rem;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+       text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 0 20px #eee;
+        border-radius: 50px;
+        border:0;
+        outline: 0;
+        margin-top: 3rem;
+        background-image: linear-gradient(to right, rgb(173,141,245) 0%, rgb(255,128,160) 51%, rgb(173,141,245) 100%);
+    }
+}

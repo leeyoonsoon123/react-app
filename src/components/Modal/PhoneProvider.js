@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {FirebaseContext} from '../Firebase'
-
+import '../../stylesheets/Modal/PhoneProvider.css';
 // Test phone number : +555685032357 ||  Verification code : 863806
 
 class PhoneProvider extends Component {
@@ -122,10 +122,10 @@ class PhoneProvider extends Component {
     render() {
         return (
             <div className='popup'>
-                <div className='popup_signUp'>
-                    <button className='close' onClick={this.props.toggleFunction}>&times;</button>
+                <button className='close' onClick={this.props.toggleFunction}>&times;</button>
+                <div className='content'>
                     <div className='insert_phone'>
-                        <h5>핸드폰 번호</h5>
+                        <h5>전화번호 입력</h5>
                         <div className='inputphone_number'>
                             <span className='custom-dropdown'>
                                 <select value={this.state.selectValue} onChange={this.handleSelect}>
@@ -137,7 +137,7 @@ class PhoneProvider extends Component {
                                     <option value='JP'>JP</option>
                                 </select>
                             </span>
-                            <input type='number' placeholder='-를 제외한 숫자만 입력하세요' onChange={this.handlePhoneNum}/>
+                            <input type='number' className="insertPhoneNum" placeholder='-를 제외한 숫자만 입력하세요' onChange={this.handlePhoneNum}/>
                         </div>
                         <div className='certification'>
                             <button type='button' className='phone_certification' onClick={this.getVerifyCode}>인증받기</button>
@@ -148,11 +148,11 @@ class PhoneProvider extends Component {
                             <button type='button' className='codeNum_certification' onClick={this.confirmVerifyCode}>확인</button>
                         </div>
                     </div>
-                    <div className='signUp-downward'>
-                        <button type='button' className='button-signUp6' onClick={this._clickNext}>다음</button>
+                </div>
+                <div className='signUp-downward'>
+                        <button type='button' className='next' onClick={this.clickNext}>다음</button>
                         <h6>2/5</h6>
                     </div>
-                </div>
             </div>
         )
     }

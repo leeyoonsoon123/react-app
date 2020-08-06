@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import '../../stylesheets/Modal/EmailProvider.css';
 class EmailProvider extends Component {
     constructor(props) {
         super(props);
@@ -82,25 +82,26 @@ class EmailProvider extends Component {
     render() {
         return (
             <div className='popup'>
-                <div className='popup_signUP'>
-                    <button className="close" onClick={this.props.toggleFunction}>&times;</button>
+                <button className="close" onClick={this.props.toggleFunction}>&times;</button>
+                <div className='content'>
                     <div className='insert_email'>
                         <h5>이메일 주소를 입력해주세요</h5>
                         <div className='inputphone_number'>
                             <input type='email' className='userEmail' placeholder='Delius@company.com' onChange={this.handleEmail}/>
                         </div>
-                        <h5>비밀번호를 입력</h5>
+                        <h5>비밀번호 입력</h5>
                         <input type='password' className='userPassword' maxLength='20' minLength='8' onChange={this.handlePassword_1}/>
-                        <span>8자리 이상 영문과 숫자를 혼합하여 사용.</span>
+                        <br/>
+                        <div className="pwRule">8자리 이상 영문과 숫자를 혼합하여 사용.</div>
                         <h5>비밀번호 확인</h5>
                         <input type='password' className='ConfirmuserPassword' maxLength='20' minLength='8' onChange={this.handlePassword_2}/>
                     </div>
-                    <div className='signUp-downward'>
-                        <button type='button' className='button-signUp' onClick={this._clickNext}>다음</button>
+                </div>
+                <div className='signUp-downward'>
+                        <button type='button' className='next' onClick={this.clickNext}>다음</button>
                         <br />
                         <h6>3/5</h6>
                     </div>
-                </div>
             </div>
         )
     }

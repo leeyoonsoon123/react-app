@@ -1,0 +1,45 @@
+.alert-message {
+    width: 100%;
+    height: 100%;
+    color: gray;
+    margin: 10% 0%;
+}
+.popup-alert{
+    margin: 4.325rem auto;
+    padding: 1.25rem 0 1.25rem 0;
+    background: #fff;
+    width: 35rem;
+    position: relative;
+    text-align: center;
+    z-index: 11;
+  
+}
+
+.mod-alert{
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: -8.5px;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+    
+  }
+
+  @media screen and (max-width:580px){
+    .popup-alert{
+        margin: 4.325rem auto;
+        padding: 1.25rem auto;
+        background: #fff;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        z-index: 11;
+      
+    }
+  }

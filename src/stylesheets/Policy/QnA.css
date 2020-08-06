@@ -1,0 +1,107 @@
+.QnA-title {
+    width: 100%;
+    /* padding: 0 7%; */
+    display: table;
+    margin: 0;
+    max-width: 100%;
+    color:grey;
+background-color: white;
+    /* background-image: url('/public/images/high_quality/Delius-HP-sec1.png'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 100vh; */
+    position:fixed;
+    
+   
+}
+
+a{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: rgb(71, 71, 71) !important;
+    text-decoration: none;
+    position: relative;
+    display: block;
+}
+.Q a:before {
+    content: '';
+    border-bottom: solid 1px white;
+    position: absolute;
+    bottom:0; left: 0.1rem;
+    width: 20%;
+  }
+  
+  .Q a:hover:before {
+    -webkit-transform: scaleY(3,5);
+    -moz-transform: scaleY(3.5);
+     -ms-transform: scaleY(3.5);
+      -o-transform: scaleY(3.5);
+         transform: scaleY(3.5);
+ border-bottom: solid thin rgb(173, 173, 173);
+  }
+  
+  .Q a:before {
+    -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+  }
+ 
+.mg-bt-3{
+    margin-bottom: 3rem;
+}
+.mg-bt-2{
+    margin-bottom: 2rem;
+}
+.mg-bt-1{
+    margin-bottom: 1rem;
+}
+.mg-bt-05{
+    margin-bottom:0.5rem;
+}
+.fw-L{
+    font-weight: 600;
+}
+.f-L{
+    font-size: 2rem;
+}
+.f-M{
+    font-size: 1.5rem;
+}
+.t-l{
+    text-align: left;
+}
+.t-ct{
+    text-align: center;
+}
+#bar-icon{
+    margin: 2% 0;
+   width: 100px;
+   height: 30px;
+}
+.Main-bar{
+    border-bottom-style: solid;
+    border-bottom-width:1px;
+    border-color: rgb(211, 210, 210);
+    width:100%;
+
+   
+}
+.box{
+    padding-top:8rem;
+}
+
+.M-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.Q{
+    cursor: pointer;
+   
+}
+.A{
+    margin:1% 10% 1% 0%;
+    padding:3% 5% 3% 5%;
+    border-radius: 10px;
+    border-style: none;
+    background-color: rgb(243, 243, 243);
+   
+}

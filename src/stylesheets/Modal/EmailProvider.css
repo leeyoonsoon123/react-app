@@ -1,0 +1,36 @@
+.userEmail, .userPassword, .ConfirmuserPassword{
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    border-radius: 20px;
+    border:1px solid rgb(199, 199, 199);
+    color: gray;
+    width: 25rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.userEmail:focus, .userPassword:focus, .ConfirmuserPassword:focus{
+    outline:none;
+}
+.pwRule{
+    text-align: left;
+    margin-left: 5rem;
+    font-size: 0.8rem;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width:580px){
+    .userEmail, .userPassword, .ConfirmuserPassword{
+        padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+      border-radius: 20px;
+      border:1px solid rgb(199, 199, 199);
+        width: 65%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .insert_email{
+        margin:4% -8%;
+    }
+    .insert_email h5{
+        font-size: 0.9rem;
+    }
+}
