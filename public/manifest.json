@@ -1,0 +1,26 @@
+{
+  "short_name": "Delius",
+  "name": "친구와 함께하는 색다른 시간 딜리어스",
+  "icons": [
+    {
+      "src": "delius-favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "delius_start.png",
+      "type": "image/png",
+      "sizes": "215x216"
+    },
+    {
+      "src": "delius_start.png",
+      "type": "image/png",
+      "sizes": "215x216"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
+
