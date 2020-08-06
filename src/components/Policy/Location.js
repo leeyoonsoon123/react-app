@@ -1,49 +1,79 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import HP_ICON from '../../images/high_quality/Delius-HP-ICON.png'
+import HP_ICON from '../../images/high_icon/delius-logo.png'
 import '../../stylesheets/Policy/Policy.css'
 
 class Location extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            openNav: false
+            openNav: true,
+            screen: {}
         }
+        this.checkNav = this.checkNav.bind(this)
     }
 
     checkNav() {
         const prevOpenNav = this.state.openNav;
         if(prevOpenNav) {
-            document.getElementById('mysidenav').style.width = '230px';
             document.getElementsByClassName('openmenu').display='block';
+            if(this.state.screen.matches){
+                document.getElementById('mysidenav').style.width = '100%';
+            }
+            else{
+                document.getElementById('mysidenav').style.width = '30%';
+            }
+
         }
         else{
             document.getElementById('mysidenav').style.width = '0';
         }
         this.setState({openNav: !prevOpenNav})
+    } 
+
+    componentDidMount() {
+        this.setState({screen : window.matchMedia("screen and (max-width: 766px)")})
     }
 
     render() {
         return (
             <div>
-                <div className='term-title'>
-                    <div className='Main-bar'>
-                        <div className='container'>
-                            <Link to='/'><img src={HP_ICON} id='bar-icon' /></Link>
-                        </div>
+            <div className='term-title'>
+                <div className='Main-bar'>
+                    <div className='container'>
+                        <Link to='/'><img src={HP_ICON} id='bar-icon' /></Link>
                     </div>
                 </div>
-                <div id='mysidenav' className='sidenav' >
-                    <a href="" className='closebtn'>x</a>
-                    <a href="#">homepage</a>
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                </div>
+            </div>
+            <div id='mysidenav' className='sidenav' >
+            <button className="contentClose" onClick={this.checkNav}>X</button>
+            
+            <ul>
+                <li className="show-menu">
+                    <div className="DeliusTab">DELIUS</div>
+                    <ul className="hide-menu">
+                        <li className="tab endline">-공지사항</li>
+                    </ul>
+                </li>
+                <li className="show-menu">
+                    <div className="DeliusTab">법적고지</div>
+                    <ul className="hide-menu">
+                        <li className="tab"><Link to='/policy/terms'>-서비스 이용약관</Link></li>
+                        <li className="tab"><Link to='/policy/privacy'>-개인정보 취급 방침</Link></li>
+                        <li className="tab endline"><Link to='/policy/location'>-위치서비스 이용약관</Link></li>
+                    </ul>
+                </li>
+                <li className="show-menu">
+                    <div className="DeliusTab">FAQ</div>
+                    <ul className="hide-menu">
+                        <li className="tab endline"><Link to='/policy/QnA'>-자주하는 질문</Link></li>
+                    </ul>
+                </li>
+            </ul>
+            </div>
                 <div className='container' >
-                    <span className='openmenu' ><i className='fa fa-angle-double-left fa-5' aria-hidden='true'>목차열기</i></span>
                     <div className='box'>
+                <button className="contentOpen" onClick={this.checkNav}></button>
                         <div className='f-m'>제 1조 (목적)</div>
                         <div className='f-s mg-top-1'>
                         본 약관은 딜리어스(이하 “당사”)가 제공하는 위치기반서비스에 대해 회사와 위치기반서비스를 이용하는 개인위치정보주체(이하 “이용자”)간의 권리,의무 및 책임사항, 기타 필요한 사항 규정을 목적으로 합니다.
